@@ -1,0 +1,51 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Taste Matching App</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <h1>Welcome to Taste Matching App</h1>
+
+        <label for="userId">User ID:</label>
+        <input type="text" id="userId" />
+
+        <label for="tastes"
+            >Enter your favorite tastes (comma-separated):</label
+        >
+        <input type="text" id="tastes" />
+
+        <button onclick="addTastes()">Add Tastes</button>
+        <button onclick="finishTastes()">Finish</button>
+        <button onclick="findMatches()">Match</button>
+        <button onclick="displayAllUsers()">Display All Users</button>
+
+        <h2>User Tastes:</h2>
+        <div id="userTastes"></div>
+
+        <h2>Matches:</h2>
+        <ul id="matchList"></ul>
+
+        <h2>All Users:</h2>
+        <div id="allUsers"></div>
+
+        <div id="similarityControl">
+            <label for="minSimilarity">Minimum Similarity:</label>
+            <input
+                type="range"
+                id="minSimilarity"
+                min="2"
+                max="10"
+                step="1"
+                value="2"
+                oninput="updateMinSimilarityValue()"
+            />
+            <span id="minSimilarityValue">2</span>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

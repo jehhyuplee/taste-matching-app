@@ -1,0 +1,15 @@
+/* styles.css */
+.user-container {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+#similarityControl {
+    margin-top: 20px;
+}
+
+#minSimilarityValue {
+    display: inline-block;
+    margin-left: 10px;
+}
